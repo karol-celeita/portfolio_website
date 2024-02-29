@@ -79,6 +79,31 @@
         </div>
     </section>
 
+    <!-- <div class="facts">
+        <ol>
+            <li style="--accent-color: #FF6F00">
+              <div class="icon">  <img class="img_fact" src="images/PNG/ingles.png" alt="ingles"></div>
+              <div class="title">6</div>
+              <div class="descr">Años de experiencia en tecnologia</div>
+            </li>
+            <li style="--accent-color: #008DC2">
+              <div class="icon"><i class="fa-light fa-flower-daffodil"></i></div>
+              <div class="title">1560</div>
+              <div class="descr">Tazas de café</div>
+            </li>
+            <li style="--accent-color: #0B456A">
+              <div class="icon"><i class="fa-light fa-chart-line-up"></i></div>
+              <div class="title">55+</div>
+              <div class="descr">Proyectos Realizados</div>
+            </li>
+            <li style="--accent-color: #6A829A">
+              <div class="icon"><i class="fa-light fa-chart-mixed"></i></div>
+              <div class="title">10+</div>
+              <div class="descr">Tecnologias y frameworks</div>
+            </li>
+          </ol>
+    </div> -->
+
     <section class="about" id="about">
         <div class="about-img">
             <img src="images/PNG/about.png" alt="acerca_de_mi">
@@ -88,7 +113,7 @@
             <h2 class="heading">Acerca de <span>mí</span></h2>
             <h3>¡Diseñadora de Experiencias Digitales: Magia en Código y Creatividad Visual!</h3>
             <p>
-                Con 5 años de experiencia navegando por el mágico universo de la tecnología,
+                Con un buen tiempo navegando por el mágico universo de la tecnología,
                 me especializo en mezclar ingredientes de Python como frameworks, bases de datos,
                 data y el encanto de JavaScript para transformar líneas de código en pócimas digitales asombrosas.
                 Pero mi magia no se detiene ahí; también tengo el poder de crear experiencias visuales cautivadoras
@@ -273,7 +298,11 @@
 
                     <div class="testimonial-slide swiper-slide">
                         <img src="images/PNG/libro.png" alt="educacion">
-                        <h3>¿Que estoy aprendiendo?</h3>
+                        <h3>Educación</h3>
+                        <p> Inicié la vida académica con un Técnico en programación de Software (SENA) 
+                            y luego con la carrera universitaria en Ingeniería de Software en la UMB (Colombia).
+                            Adicional a esto he realizado diplomados en IA (U. Sergio Arboleda) y en Codificación y programación (Javeriana).
+                        </p> <br>
                         <p> Persisto en mi travesía de aprendizaje, con la mira puesta en certificaciones
                             en AWS, GCP y Azure. Cada desafío es una oportunidad para expandir mi 
                             conocimiento y dominar la magia de estas plataformas en la nube,
@@ -295,14 +324,38 @@
 
         <form action="#">
             <div class="input-box">
-                <input type="text" placeholder="Nombre Completo">
-                <input type="email" placeholder="Correo">
+                <div class="input-field field">
+                    <input type="text" placeholder="Nombre" id="name"
+                    class="item" autocomplete="off">
+                    <div class="error-txt">¡Opps, el nombre no puede estar vacío!</div>
+                </div>
+
+                <div class="input-field field">
+                    <input type="text" placeholder="Correo" id="email"
+                    class="item" autocomplete="off">
+                    <div class="error-txt email">¡Opps, el correo no puede estar vacío!</div>
+                </div>
+             
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Telefono">
-                <input type="text" placeholder="Asunto">
+
+                <div class="input-field field">
+                    <input type="text" placeholder="Teléfono" id="phone"
+                    class="item" autocomplete="off">
+                    <div class="error-txt">¡Opps, el teléfono no puede estar vacío!</div>
+                </div>
+
+                <div class="input-field field">
+                    <input type="text" placeholder="Asunto" id="subject"
+                    class="item" autocomplete="off">
+                    <div class="error-txt">¡Opps, el asunto no puede estar vacío!</div>
+                </div>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+
+            <div class="textarea-field field">
+                <textarea name="" id="message" class="item" cols="30" rows="10" placeholder="Deja tu mensaje"></textarea>
+                <div class="error-txt">¡Opps, esto no puede estar vacío!</div>
+            </div>
             <input type="submit" value="Enviar" class="btn">
         </form>
     </section>
@@ -317,8 +370,11 @@
     </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/send_email.js"></script>
 
 </body>
 
